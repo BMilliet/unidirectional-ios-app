@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:packages/AppCore">
+   </FileRef>
+   <FileRef
+      location = "group:packages/Login">
+   </FileRef>
+   <FileRef
+      location = "group:packages/Menu">
+   </FileRef>
+   <FileRef
+      location = "group:packages/AppMain">
+   </FileRef>
+   <FileRef
       location = "group:packages/ViewCode">
    </FileRef>
    <FileRef
