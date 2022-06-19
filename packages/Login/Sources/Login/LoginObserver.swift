@@ -1,7 +1,8 @@
+import Foundation
 import AppCore
 import Combine
 
-struct LoginObserver: Observer {
+final class LoginObserver: Observer {
     @Published public private(set) var state: LoginViewState = .empty
     var loginViewControllerStateSubscription: AnyCancellable?
     
@@ -46,12 +47,10 @@ struct LoginObserver: Observer {
     }
     
     @objc func loginFail() {
-        print("login fail")
         state = .error
     }
     
     @objc func loginSuccess() {
-        print("login success")
         state = .success
     }
     
@@ -62,10 +61,4 @@ struct LoginObserver: Observer {
     private func received(state: LoginViewState) {
         eventReponder?.render(newState: state)
     }
-}
-
-protocol LoginObserverResponder {}
-
-enum LoginViewState {
-    case empty, success, error
 }

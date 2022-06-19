@@ -1,15 +1,32 @@
 import UIKit
+import AppCore
 
-struct AppRouter {
+public final class AppRouter {
     let navigation: UINavigationController
     
-    init(window: UIWindow) {
+    var action: Action?
+    
+    public init(window: UIWindow?) {
         self.navigation = UINavigationController()
-        window.rootViewController = navigation
+        window?.rootViewController = navigation
+        
+        
+        // mock navigation
+        initNavigation()
     }
     
-    private func pushViewController(viewController: UIViewController) {
+    func push(action: Action, viewController: UIViewController) {
         let animated = navigation.topViewController != nil
-        navigation?.pushViewController(viewController, animated: animated)
+        self.action = action
+        navigation.pushViewController(viewController, animated: animated)
+    }
+    
+    private func initNavigation() {
+        let action = GoToLoginAction()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            let notificationName = NSNotification.Name("\(GoToLoginAction())")
+            NotificationCenter.default.post(name: notificationName, object: GoToLoginAction())
+        })
     }
 }

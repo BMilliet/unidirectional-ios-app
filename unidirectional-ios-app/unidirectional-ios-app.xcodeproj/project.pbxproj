@@ -13,6 +13,7 @@
 		57A134CE285F66810013F139 /* unidirectional_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A134CD285F66810013F139 /* unidirectional_ios_appTests.swift */; };
 		57A134D8285F66810013F139 /* unidirectional_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A134D7285F66810013F139 /* unidirectional_ios_appUITests.swift */; };
 		57A134DA285F66810013F139 /* unidirectional_ios_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A134D9285F66810013F139 /* unidirectional_ios_appUITestsLaunchTests.swift */; };
+		57DE2BC0285FBC29003A3DAF /* AppMain in Frameworks */ = {isa = PBXBuildFile; productRef = 57DE2BBF285FBC29003A3DAF /* AppMain */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DE2BC0285FBC29003A3DAF /* AppMain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +79,7 @@
 				57A134CC285F66810013F139 /* unidirectional-ios-appTests */,
 				57A134D6285F66810013F139 /* unidirectional-ios-appUITests */,
 				57A134B4285F667F0013F139 /* Products */,
+				57DE2BBE285FBC29003A3DAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +121,13 @@
 			path = "unidirectional-ios-appUITests";
 			sourceTree = "<group>";
 		};
+		57DE2BBE285FBC29003A3DAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +144,9 @@
 			dependencies = (
 			);
 			name = "unidirectional-ios-app";
+			packageProductDependencies = (
+				57DE2BBF285FBC29003A3DAF /* AppMain */,
+			);
 			productName = "unidirectional-ios-app";
 			productReference = 57A134B3285F667F0013F139 /* unidirectional-ios-app.app */;
 			productType = "com.apple.product-type.application";
@@ -574,6 +587,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		57DE2BBF285FBC29003A3DAF /* AppMain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppMain;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 57A134AB285F667F0013F139 /* Project object */;
 }
